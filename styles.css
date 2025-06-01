@@ -22,7 +22,7 @@ h1 {
 }
 
 .intro-description {
-    margin-bottom: 50px; /* Added spacing */
+    margin-bottom: 50px; /* Adds spacing */
 }
 
 /* Add Movie Form */
@@ -67,12 +67,14 @@ button:hover {
     background-color: #e6b800;
 }
 
-/* Movie List */
-.movie-list {
+/* Movie Lists */
+.movie-list, .movie-list-static {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px; /* Adds spacing */
 }
 
 .movie {
@@ -81,6 +83,7 @@ button:hover {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .movie img {
@@ -100,4 +103,11 @@ button:hover {
 h2 {
     font-size: 24px;
     color: #ffcc00;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 18px;
+    color: #ccc;
 }
