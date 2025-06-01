@@ -11,53 +11,54 @@
     <header>
         <h1>Recently Watched Movies</h1>
         <p class="intro-text">A Cinematic Journey Through Stories That Captivated Me</p>
-        <p class="intro-description">From exciting thrillers to moving dramas, this collection highlights the films that have captured my attention. Each one stands out for its stunning visuals, engaging stories, or memorable performances.</p>
     </header>
 
-    <!-- Add Movie Form -->
-    <section class="add-movie">
-        <h2>Add a Movie</h2>
+    <!-- Add/Edit Movie Form -->
+    <section class="movie-form-container">
+        <h2 id="form-title">Add a Movie</h2>
         <form id="movie-form">
             <input type="text" id="title" placeholder="Movie Title" required>
             <input type="number" id="year" placeholder="Year" required>
             <input type="text" id="rating" placeholder="Rating" required>
             <textarea id="description" placeholder="Description" required></textarea>
-            <input type="file" id="poster" accept="image/*" required>
-            <button type="submit">Add Movie</button>
+            <input type="file" id="poster" accept="image/*">
+            <button type="submit">Save Movie</button>
         </form>
     </section>
 
-    <section class="movie-list" id="movie-list">
-        <!-- Movies will be added dynamically here -->
-    </section>
+    <!-- Movies Displayed Here -->
+    <section class="movie-list" id="movie-list"></section>
 
-
+    <!-- Static Movies -->
     <section class="movie-list-static">
-    <div class="movie">
-        <a href="https://www.imdb.com/title/tt9603212" target="_blank">
-            <img src="mission-impossible.jpg" alt="Mission Impossible Poster">
-        </a>
-        <div class="movie-info">
-            <h2>Mission: Impossible - Dead Reckoning - Part One</h2>
-            <p><strong>Year:</strong> 2022</p>
-            <p><strong>Rating:</strong> 7.8/10</p>
-            <p>Seventh entry in the long-running Mission: Impossible series.</p>
-        </div>
-    </div>
+        <h2>Featured Movies</h2>
+        <div class="movie-grid">
+            <!-- Static movies pre-defined here -->
+            <div class="movie">
+                <a href="https://www.imdb.com/title/tt9603212" target="_blank">
+                    <img src="mission-impossible.jpg" alt="Mission Impossible Poster">
+                </a>
+                <div class="movie-info">
+                    <h2>Mission: Impossible - Dead Reckoning - Part One</h2>
+                    <p><strong>Year:</strong> 2022</p>
+                    <p><strong>Rating:</strong> 7.8/10</p>
+                    <p>Seventh entry in the long-running Mission: Impossible series.</p>
+                </div>
+            </div>
 
-    <div class="movie">
-        <a href="https://www.imdb.com/title/tt0421715/" target="_blank">
-            <img src="benjamin-button.jpg" alt="The Curious Case of Benjamin Button Poster">
-        </a>
-        <div class="movie-info">
-            <h2>The Curious Case of Benjamin Button</h2>
-            <p><strong>Year:</strong> 2009</p>
-            <p><strong>Rating:</strong> 7.8/10</p>
-            <p>A man ages in reverse, experiencing life’s joys and heartbreaks in a unique way.</p>
-        </div>
-    </div>
+            <div class="movie">
+                <a href="https://www.imdb.com/title/tt0421715/" target="_blank">
+                    <img src="benjamin-button.jpg" alt="The Curious Case of Benjamin Button Poster">
+                </a>
+                <div class="movie-info">
+                    <h2>The Curious Case of Benjamin Button</h2>
+                    <p><strong>Year:</strong> 2009</p>
+                    <p><strong>Rating:</strong> 7.8/10</p>
+                    <p>A man ages in reverse, experiencing life’s joys and heartbreaks in a unique way.</p>
+                </div>
+            </div>
 
-    <div class="movie">
+            <div class="movie">
         <a href="https://www.imdb.com/title/tt0181689/" target="_blank">
             <img src="minority-report.jpg" alt="Minority Report Poster">
         </a>
@@ -152,7 +153,9 @@
             <p>A woman pursues artificial insemination, unaware that her best friend drunkenly switched the donor’s sample.</p>
         </div>
     </div>
-</section>
+    
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Recently Watched Movies</p>

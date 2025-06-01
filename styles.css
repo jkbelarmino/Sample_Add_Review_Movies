@@ -16,69 +16,100 @@ h1 {
     margin-bottom: 10px;
 }
 
-.intro-text, .intro-description {
-    max-width: 800px;
-    margin: auto;
+h2 {
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 20px;
 }
 
-.intro-description {
-    margin-bottom: 50px; /* Adds spacing */
-}
-
-/* Add Movie Form */
-.add-movie {
+/* Form Layout */
+.movie-form-container {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     margin-bottom: 50px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.add-movie h2 {
-    font-size: 30px;
-    color: #ffcc00;
-}
-
+/* Form Fields */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-input, textarea {
+form input[type="text"],
+form input[type="number"],
+form textarea {
     font-size: 18px;
+    padding: 12px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+/* Image Upload */
+input[type="file"] {
+    font-size: 18px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     padding: 10px;
-    width: 80%;
-    border-radius: 5px;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
+/* Buttons */
 button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 18px;
-    background-color: #ffcc00;
+    font-weight: bold;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.3s;
+    width: 90%;
 }
 
-button:hover {
+/* Save Movie Button */
+button#save-movie {
+    background-color: #ffcc00;
+    color: #2c2c2c;
+}
+
+button#save-movie:hover {
     background-color: #e6b800;
 }
 
+/* Add Picture Button */
+button#add-picture {
+    background-color: #3498db;
+    color: #fff;
+}
+
+button#add-picture:hover {
+    background-color: #2980b9;
+}
+
 /* Movie Lists */
-.movie-list, .movie-list-static {
-    display: flex;
-    flex-wrap: wrap;
+.movie-list, .movie-list-static .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 30px; /* Adds spacing */
+    margin-top: 30px;
 }
 
+/* Movie Cards */
 .movie {
-    width: 300px;
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 10px;
@@ -86,6 +117,7 @@ button:hover {
     text-align: center;
 }
 
+/* Movie Image */
 .movie img {
     width: 100%;
     border-radius: 10px;
@@ -96,13 +128,46 @@ button:hover {
     opacity: 0.8;
 }
 
+/* Movie Info & Button Fixes */
 .movie-info {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Ensures buttons are properly spaced */
 }
 
-h2 {
-    font-size: 24px;
-    color: #ffcc00;
+/* Edit & Delete Buttons */
+.edit-btn, .delete-btn {
+    display: block;
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+.edit-btn {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
 }
 
 /* Footer */
