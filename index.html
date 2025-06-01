@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Recently Watched Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recently Watched Movies</h1>
+        <p class="intro-text">A Cinematic Journey Through Stories That Captivated Me</p>
+        <p class="intro-description">From exciting thrillers to moving dramas, this collection highlights the films that have captured my attention. Each one stands out for its stunning visuals, engaging stories, or memorable performances.</p>
+    </header>
+
+    <!-- Add Movie Form -->
+    <section class="add-movie">
+        <h2>Add a Movie</h2>
+        <form id="movie-form">
+            <input type="text" id="title" placeholder="Movie Title" required>
+            <input type="number" id="year" placeholder="Year" required>
+            <input type="text" id="rating" placeholder="Rating" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="file" id="poster" accept="image/*" required>
+            <button type="submit">Add Movie</button>
+        </form>
+    </section>
+
+    <section class="movie-list" id="movie-list">
+        <!-- Movies will be added dynamically here -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
